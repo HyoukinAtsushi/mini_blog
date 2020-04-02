@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8-BIT WORDS</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="title">
+        <a href="/", class="link">8-BIT WORDS</a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li class="entry_button">
+            <%= link_to "SignUp", "/users/sign_up", method: :get, class:"link" %>
+          </li>
+          <li class="entry_button">
+            <%= link_to "LogIn", "/users/sign_in", method: :get, class:"link" %>
+          </li>
+          <li class="entry_button">
+            <%= link_to "SignOut", "/users/sign_out", method: :delete, class:"link" %>
+          </li>
+          <li class="entry_button">
+            <a href="/articles/new", class="link">Write</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>
